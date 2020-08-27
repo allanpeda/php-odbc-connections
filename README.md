@@ -1,2 +1,2 @@
 # php-odbc-connections
-Some test scripts for php connection
+Some scripts for testing php connections to an MS SQL Server Database using ODBC
