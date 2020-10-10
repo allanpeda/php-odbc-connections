@@ -10,10 +10,11 @@ define('SQL_COLUMN_CASE_SENSITIVE',  12);
 define('SQL_QUERY_TIMEOUT',           0);
 
 try  {
-   $dbname = 'budget';
-   $dbuser = 'analyst';
-   $dbpass = '***********';
-   $conn = odbc_connect("Dsn=$dbname;", $dbuser,$dbpass);
+   $dsn      = 'hr';
+   $database = 'payroll';
+   $dbuser = 'admin';
+   $dbpass = '***************';
+   $conn = odbc_connect("Dsn=$dsn;Database=$database", $dbuser,$dbpass);
    // optional to demonstrate settings
    odbc_setoption($conn,  SQLSETCONNECTOPTION, SQL_COLUMN_CASE_SENSITIVE, false);
    $dql = "select cast(current_user as nvarchar(20))   as [CURRENT_USER],
